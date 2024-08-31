@@ -14,7 +14,7 @@ A package designed to Find the coefficients of a function $f(x)$ that best fits 
 
 ## Usage
 The package can be used in a couple of ways depending on what you want to do.
-The function for curve fitting is ``curve_fit(data,x,type,degree,model,p0)``. Not all parameters need to be used, it depends. 
+The function for curve fitting is ``curve_fit_py.curve_fit(data,x,type,degree,model,p0)``. Not all parameters need to be used, it depends. 
 The package provides 3 built-in function types:
 1. **Polynomial**
 2. **Exponential**
@@ -29,11 +29,11 @@ which can be used with
  ```
  import numpy as np
  import matplotlib as plt
- import curve_fit_py as cfp
+ from curve_fit_py import curve_fit
 
  sample = np.array([1,2,3,4,5,6,7,8,9,10]) 
  x = np.arange(1,11) # Obviously a 1 degree polynomial, i.e a line.
- a,b = cfp.curve_fit(data=sample,x=x, type='polynomial',degree=1)
+ a,b = cfp(data=sample,x=x, type='polynomial',degree=1)
 
  t = np.linspace(1,10,50)
  fig, ax = plt.subplots()
@@ -48,14 +48,14 @@ However, not everybody needs one of these types of functions. Maybe somebody req
 ```
  import numpy as np
  import matplotlib as plt
- import curve_fit_py as cfp
+ from curve_fit_py import curve_fit
 
 def sin_model(x,a,b):
     return a*np.sin(b*x)
 
  sample = np.array([0,5,10,5,0,-5,-10,-5,0]) 
  x = np.arange(0,10) # Obviously a sin function.
- a,b = cfp.curve_fit(data=sample,x=x,model = sin_model, p0 =[10,0.69])
+ a,b = cfp(data=sample,x=x,model = sin_model, p0 =[10,0.69])
 
  t = np.linspace(0,10,50)
  fig, ax = plt.subplots()
