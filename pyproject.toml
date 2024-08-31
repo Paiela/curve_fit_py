@@ -18,5 +18,5 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = ""
-Issues = ""
+Homepage = "https://github.com/Paiela/curve_fit_py"
+Issues = "https://github.com/Paiela/curve_fit_py/issues"
