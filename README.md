@@ -72,6 +72,7 @@ The package uses multiple techniques for approximating a curve given a data set.
 If the user has provided a type of function in the parameters, the initial guess for the coefficients will be done through least squares, i.e won't be really a guess but a first approximation. It works the following way for a 1 degree polynomial:
 
 $$Ax = b$$
+
 $$\begin{bmatrix}x_1 & 1 \\ x_2 & 1 \\ \vdots & \vdots \\ x_i & 1 \end{bmatrix} \begin{bmatrix} a \\ b \end{bmatrix} = \begin{bmatrix} y_1 \\ y_2 \\ \vdots \\ y_i \end{bmatrix}$$
 
 In which $x_i$ and $y_i$ are entries from the arrays ``data`` and ``x`` provided. Given that we can't possibly find the inverse of $A$ and solve the equation, we must apply the least square method to give us an approximate answer. That would be:
@@ -86,7 +87,7 @@ $$J = \begin{bmatrix} \frac{\partial r_i}{\partial \theta} \\ \vdots \end{bmatri
 
 We multiply $J$ by a matrix called $\Delta \theta$ and we equate to the matrix of residuals $r$.
 
-$$ \begin{bmatrix} \frac{\partial r_i}{\partial \theta} \\ \vdots \end{bmatrix} \begin{bmatrix} \Delta \theta \end{bmatrix} = \begin{bmatrix} r_i \\ \vdots \end{bmatrix}$$
+$$ \begin{bmatrix} \frac{\partial r_i}{\partial \theta} \\\ \vdots \end{bmatrix} \begin{bmatrix} \Delta \theta \end{bmatrix} = \begin{bmatrix} r_i \\ \vdots \end{bmatrix}$$
 
 We solve for $\Delta \theta$ using the least square method and we get a solution which tells us by how much we should multiply the derivative of $r_i$ with respect to $\theta$ to get the currently existing residual or error of $r_i$. If we do that in the opposite direction, we should get 0 error
 
