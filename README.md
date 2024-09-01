@@ -73,7 +73,7 @@ If the user has provided a type of function in the parameters, the initial guess
 
 $$Ax = b$$
 
-$$\begin{bmatrix}x_1 & 1 \\ x_2 & 1 \\ \vdots & \vdots \\ x_i & 1 \end{bmatrix} \begin{bmatrix} a \\ b \end{bmatrix} = \begin{bmatrix} y_1 \\ y_2 \\ \vdots \\ y_i \end{bmatrix}$$
+$$\begin{bmatrix}x_1 & 1 \\\ x_2 & 1 \\\ \vdots & \vdots \\\ x_i & 1 \end{bmatrix} \begin{bmatrix} a \\\ b \end{bmatrix} = \begin{bmatrix} y_1 \\\ y_2 \\ \vdots \\\ y_i \end{bmatrix}$$
 
 In which $x_i$ and $y_i$ are entries from the arrays ``data`` and ``x`` provided. Given that we can't possibly find the inverse of $A$ and solve the equation, we must apply the least square method to give us an approximate answer. That would be:
 
@@ -83,7 +83,7 @@ However this doesn't always give a good approximation. In cases with an exponent
 
 Imagine we have a matrix with already existing initial approximations/guesses called $p_0$. Say we only have one component or a bunch of them under one name - $\theta$. We now define a new variable, called a residual: $r_i = y_i - f(x_i,\theta)$ in which $f$ is the function that is attempting to approximate the data set. After that we define a matrix $J$ in which we have entries:
 
-$$J = \begin{bmatrix} \frac{\partial r_i}{\partial \theta} \\ \vdots \end{bmatrix}$$
+$$J = \begin{bmatrix} \frac{\partial r_i}{\partial \theta} \\\ \vdots \end{bmatrix}$$
 
 We multiply $J$ by a matrix called $\Delta \theta$ and we equate to the matrix of residuals $r$.
 
