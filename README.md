@@ -73,7 +73,7 @@ If the user has provided a type of function in the parameters, the initial guess
 
 $$Ax = b$$
 
-$$\begin{bmatrix}x_1 & 1 \\\ x_2 & 1 \\\ \vdots & \vdots \\\ x_i & 1 \end{bmatrix} \begin{bmatrix} a \\\ b \end{bmatrix} = \begin{bmatrix} y_1 \\\ y_2 \\ \vdots \\\ y_i \end{bmatrix}$$
+$$\begin{bmatrix}x_1 & 1 \\\ x_2 & 1 \\\ \vdots & \vdots \\\ x_i & 1 \end{bmatrix} \begin{bmatrix} a \\\ b \end{bmatrix} = \begin{bmatrix} y_1 \\\ y_2 \\\ \vdots \\\ y_i \end{bmatrix}$$
 
 In which $x_i$ and $y_i$ are entries from the arrays ``data`` and ``x`` provided. Given that we can't possibly find the inverse of $A$ and solve the equation, we must apply the least square method to give us an approximate answer. That would be:
 
