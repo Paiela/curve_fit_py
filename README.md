@@ -87,7 +87,7 @@ $$J = \begin{bmatrix} \frac{\partial r_i}{\partial \theta} \\ \vdots \end{bmatri
 
 We multiply $J$ by a matrix called $\Delta \theta$ and we equate to the matrix of residuals $r$.
 
-$$ \begin{bmatrix} \frac{\partial r_i}{\partial \theta} \\\ \vdots \end{bmatrix} \begin{bmatrix} \Delta \theta \end{bmatrix} = \begin{bmatrix} r_i \\ \vdots \end{bmatrix}$$
+$$ \begin{bmatrix} \frac{\partial r_i}{\partial \theta} \\\ \vdots \end{bmatrix} \begin{bmatrix} \Delta \theta \end{bmatrix} = \begin{bmatrix} r_i \\\ \vdots \end{bmatrix}$$
 
 We solve for $\Delta \theta$ using the least square method and we get a solution which tells us by how much we should multiply the derivative of $r_i$ with respect to $\theta$ to get the currently existing residual or error of $r_i$. If we do that in the opposite direction, we should get 0 error
 
